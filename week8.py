@@ -203,6 +203,7 @@ class Sprite:
         else :
             return False
 
+# help function
 def group_collide(group, other_obj):
     global explosion_group
     state = False
@@ -230,7 +231,8 @@ def process_sprite_group(group, canvas):
         # if sprite.update return False, then remove it.
         if not sprite.update():
             group.remove(sprite)
-           
+
+# draw handler           
 def draw(canvas):
     global time, lives, score, started, num_of_rock
     
@@ -329,6 +331,7 @@ def keydown(key):
     else :
         pass
 
+# mouse click handler
 def clickstart(pos):
     global started, lives, score, num_of_rock, rock_group    
     upper_left = [0, 0]
